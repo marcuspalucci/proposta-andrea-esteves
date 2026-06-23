@@ -124,14 +124,14 @@ export const proposals = {
     date: "Junho 2026",
     client: {
       name: "Nadielle e João Pedro",
-      doctor: "Arquiteta: Vitória Fadu",
+      doctor: "Nadielle e João Pedro",
       specialty: "Alphaville 3",
       description: "Projeto paisagístico contemporâneo de reforma, integrando conservação de espécies locais com uma revitalização completa para acompanhar a nova arquitetura da residência."
     },
     hero: {
       title: "O jardim é a extensão do seu modo de viver.",
       subtitle: "Paisagismo Residencial Autoral",
-      backgroundImage: "https://residencial.andreaesteves.com.br/imagens/hero.jpg"
+      backgroundImage: "/clientes/IMG_0260.jpg"
     },
     about: {
       title: "O Verdadeiro Luxo",
@@ -173,7 +173,7 @@ export const proposals = {
       }
     ],
     instagramReels: [
-      "https://www.instagram.com/reel/DKk8Dh9yfsf/embed/"
+      "https://www.instagram.com/reel/DJ5DP_VS0fk/embed/"
     ],
     commercial: {
       title: "Proposta de Investimento",
