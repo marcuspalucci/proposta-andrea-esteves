@@ -36,7 +36,7 @@ export default function CasesGallery() {
   };
 
   const nextImage = (e) => {
-    e.stopPropagation();
+    if (e) e.stopPropagation();
     const currentProject = references[lightbox.projectIndex];
     if (lightbox.imageIndex < currentProject.images.length - 1) {
       setLightbox(prev => ({ ...prev, imageIndex: prev.imageIndex + 1 }));
@@ -47,7 +47,7 @@ export default function CasesGallery() {
   };
 
   const prevImage = (e) => {
-    e.stopPropagation();
+    if (e) e.stopPropagation();
     const currentProject = references[lightbox.projectIndex];
     if (lightbox.imageIndex > 0) {
       setLightbox(prev => ({ ...prev, imageIndex: prev.imageIndex - 1 }));
@@ -56,6 +56,22 @@ export default function CasesGallery() {
       setLightbox(prev => ({ ...prev, imageIndex: currentProject.images.length - 1 }));
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightbox.isOpen) return;
+      if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightbox]);
 
   return (
     <>
