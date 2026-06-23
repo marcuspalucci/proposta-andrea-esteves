@@ -156,12 +156,10 @@ export const proposals = {
         title: "Aline e Gustavo",
         description: "Projeto paisagístico residencial com repaginação e conservação.",
         images: [
-          "/referencias/Aline e Gustavo/20240416_161058-2.jpg",
           "/referencias/Aline e Gustavo/_MG_1428.jpg",
           "/referencias/Aline e Gustavo/_MG_1447.jpg",
           "/referencias/Aline e Gustavo/_MG_1493.jpg",
           "/referencias/Aline e Gustavo/_MG_3328.jpg",
-          "/referencias/Aline e Gustavo/_MG_3331.jpg",
           "/referencias/Aline e Gustavo/_MG_3375-Editar.jpg"
         ]
       },
@@ -172,11 +170,21 @@ export const proposals = {
         images: [
           "/referencias/heloisa e Daniel/20240220_124030.jpg",
           "/referencias/heloisa e Daniel/20240220_124343.jpg",
-          "/referencias/heloisa e Daniel/20240220_124654.jpg",
-          "/referencias/heloisa e Daniel/20240220_124807.jpg",
           "/referencias/heloisa e Daniel/DJI_0192.jpg",
           "/referencias/heloisa e Daniel/IMG_3173.jpg",
           "/referencias/heloisa e Daniel/_MG_3010.jpg"
+        ]
+      },
+      {
+        id: "karina-tonielo",
+        title: "Residencial Karina Tonielo",
+        description: "Estilo neoclássico que dialoga perfeitamente com a arquitetura.",
+        images: [
+          "/referencias/Karina Tonielo/A_MG_3928.jpg",
+          "/referencias/Karina Tonielo/DJI_0501.jpg",
+          "/referencias/Karina Tonielo/DJI_0512-Editar.jpg",
+          "/referencias/Karina Tonielo/DJI_0518.jpg",
+          "/referencias/Karina Tonielo/_MG_3912.jpg"
         ]
       }
     ],
