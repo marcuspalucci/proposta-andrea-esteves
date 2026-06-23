@@ -181,14 +181,8 @@ export const proposals = {
       options: [
         {
           type: "Valor do Projeto",
-          value: "12.000",
-          condition: "À vista",
-          highlight: false
-        },
-        {
-          type: "Valor do Projeto",
           value: "15.000",
-          condition: "Parcelado",
+          condition: "",
           highlight: true
         }
       ]
