@@ -79,7 +79,7 @@ export const baseTemplate = {
     "https://www.instagram.com/reel/CtUomsRvNc7/embed/"
   ],
   contact: {
-    whatsapp: "5511999999999",
+    whatsapp: "5516997529222",
     email: "contato@andreaesteves.com",
     ctaText: "Aprovar Proposta"
   }
