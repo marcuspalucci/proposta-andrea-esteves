@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './Process.css';
 
 export default function Process() {
-  const { process } = proposalData;
+  const { process } = useProposal();
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 

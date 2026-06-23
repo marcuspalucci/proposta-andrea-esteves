@@ -1,21 +1,4 @@
-export const proposalData = {
-  client: {
-    name: "Thales Matos",
-    doctor: "Dr. Thales Matos",
-    specialty: "Clínica de Endocrinologia e Saúde da Mulher",
-    description: "Proposta de paisagismo que integra o ambiente construído ao natural, valorizando os espaços de permanência e refletindo cuidado e zelo em cada detalhe."
-  },
-  hero: {
-    title: "A Natureza como Extensão do Cuidado",
-    subtitle: "Projeto Paisagístico para Clínica Thales Matos",
-    backgroundImage: "/clientes/IMG_0260.jpg"
-  },
-  concept: {
-    title: "O Propósito",
-    description: "O projeto de paisagismo busca interagir profundamente com a obra arquitetônica, criando uma valorização imediata do espaço de permanência. Trazer esse ambiente natural para dentro dos espaços construídos não é apenas estética, mas um pilar essencial na percepção de saúde.",
-    highlight: "Em uma clínica dedicada à saúde da mulher, o paisagismo impacta diretamente na percepção de cuidado e zelo.",
-    secondaryDescription: "As pacientes que frequentarem o espaço perceberão esse olhar diferenciado. O ambiente proporcionará uma humanização maior e uma reconexão destas mulheres com a essência e a naturalidade, elementos que de fato possuem valor inestimável."
-  },
+export const baseTemplate = {
   about: {
     title: "O Verdadeiro Luxo",
     quote: "Transformamos espaços em experiências. Cada projeto é uma oportunidade de criar ambientes que inspiram, acolhem e valorizam o patrimônio de quem confia em nós.",
@@ -90,18 +73,6 @@ export const proposalData = {
       ]
     }
   ],
-  commercial: {
-    title: "Proposta de Investimento",
-    description: "Um investimento no bem-estar e na experiência premium dos seus pacientes.",
-    options: [
-      {
-        type: "Valor do Projeto",
-        value: "15.000",
-        condition: "",
-        highlight: true
-      }
-    ]
-  },
   instagramReels: [
     "https://www.instagram.com/reel/DKk8Dh9yfsf/embed/",
     "https://www.instagram.com/reel/DJ5DP_VS0fk/embed/",
@@ -113,3 +84,48 @@ export const proposalData = {
     ctaText: "Aprovar Proposta"
   }
 };
+
+export const proposals = {
+  "thales-matos": {
+    id: "thales-matos",
+    date: "Junho 2026",
+    client: {
+      name: "Thales Matos",
+      doctor: "Dr. Thales Matos",
+      specialty: "Clínica de Endocrinologia e Saúde da Mulher",
+      description: "Proposta de paisagismo que integra o ambiente construído ao natural, valorizando os espaços de permanência e refletindo cuidado e zelo em cada detalhe."
+    },
+    hero: {
+      title: "A Natureza como Extensão do Cuidado",
+      subtitle: "Projeto Paisagístico para Clínica Thales Matos",
+      backgroundImage: "/clientes/IMG_0260.jpg"
+    },
+    concept: {
+      title: "O Propósito",
+      description: "O projeto de paisagismo busca interagir profundamente com a obra arquitetônica, criando uma valorização imediata do espaço de permanência. Trazer esse ambiente natural para dentro dos espaços construídos não é apenas estética, mas um pilar essencial na percepção de saúde.",
+      highlight: "Em uma clínica dedicada à saúde da mulher, o paisagismo impacta diretamente na percepção de cuidado e zelo.",
+      secondaryDescription: "As pacientes que frequentarem o espaço perceberão esse olhar diferenciado. O ambiente proporcionará uma humanização maior e uma reconexão destas mulheres com a essência e a naturalidade, elementos que de fato possuem valor inestimável."
+    },
+    commercial: {
+      title: "Proposta de Investimento",
+      description: "Um investimento no bem-estar e na experiência premium dos seus pacientes.",
+      options: [
+        {
+          type: "Valor do Projeto",
+          value: "15.000",
+          condition: "",
+          highlight: true
+        }
+      ]
+    }
+  }
+};
+
+// Mantemos o proposalData apontando para o primeiro cliente apenas para evitar quebrar o app atual enquanto refatoramos
+export const proposalData = { ...baseTemplate, ...proposals["thales-matos"] };
+
+export function getProposal(id) {
+  const custom = proposals[id];
+  if (!custom) return null;
+  return { ...baseTemplate, ...custom };
+}

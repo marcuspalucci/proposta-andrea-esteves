@@ -1,9 +1,9 @@
 import React from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './FooterCTA.css';
 
 export default function FooterCTA() {
-  const { contact } = proposalData;
+  const { contact } = useProposal();
   
   const whatsappLink = `https://wa.me/${contact.whatsapp}?text=Olá,%20gostaria%20de%20aprovar%20a%20proposta%20de%20paisagismo!`;
 

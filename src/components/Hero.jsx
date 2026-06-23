@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './Hero.css';
 
 export default function Hero() {
-  const { hero, client } = proposalData;
+  const { hero, client } = useProposal();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './Context.css';
 
 export default function ContextAndPurpose() {
-  const { concept } = proposalData;
+  const { concept } = useProposal();
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 

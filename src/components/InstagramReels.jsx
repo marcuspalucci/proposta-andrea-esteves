@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './InstagramReels.css';
 
 export default function InstagramReels() {
-  const { instagramReels } = proposalData;
+  const { instagramReels } = useProposal();
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 

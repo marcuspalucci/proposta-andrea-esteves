@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { proposalData } from '../data/config';
+import { useProposal } from '../context/ProposalContext';
 import './CasesGallery.css';
 
 export default function CasesGallery() {
-  const { references } = proposalData;
+  const { references } = useProposal();
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   
