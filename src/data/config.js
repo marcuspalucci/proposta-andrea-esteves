@@ -58,6 +58,8 @@ export const baseTemplate = {
       link: "https://www.instagram.com/p/DJ5DP_VS0fk/",
       images: [
         "/referencias/Karina Tonielo/A_MG_3928.jpg",
+        "/referencias/Karina Tonielo/DJI_0501.jpg",
+        "/referencias/Karina Tonielo/DJI_0512-Aprimorado-NR.jpg",
         "/referencias/Karina Tonielo/DJI_0518.jpg",
         "/referencias/Karina Tonielo/_MG_3912.jpg"
       ]
@@ -182,7 +184,7 @@ export const proposals = {
         images: [
           "/referencias/Karina Tonielo/A_MG_3928.jpg",
           "/referencias/Karina Tonielo/DJI_0501.jpg",
-          "/referencias/Karina Tonielo/DJI_0512-Editar.jpg",
+          "/referencias/Karina Tonielo/DJI_0512-Aprimorado-NR.jpg",
           "/referencias/Karina Tonielo/DJI_0518.jpg",
           "/referencias/Karina Tonielo/_MG_3912.jpg"
         ]
