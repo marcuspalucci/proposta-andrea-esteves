@@ -181,7 +181,6 @@ export const proposals = {
       }
     ],
     instagramReels: [
-      "https://www.instagram.com/reel/DHFD0eYNJ39/embed/",
       "https://www.instagram.com/reel/CpTcTbRvrwL/embed/",
       "https://www.instagram.com/reel/CqJl_GIMD7e/embed/",
       "https://www.instagram.com/reel/DJ5DP_VS0fk/embed/"
