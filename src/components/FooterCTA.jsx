@@ -3,9 +3,11 @@ import { useProposal } from '../context/ProposalContext';
 import './FooterCTA.css';
 
 export default function FooterCTA() {
-  const { contact } = useProposal();
+  const proposal = useProposal();
+  const { contact, client } = proposal;
   
-  const whatsappLink = `https://wa.me/${contact.whatsapp}?text=Olá,%20gostaria%20de%20aprovar%20a%20proposta%20de%20paisagismo!`;
+  const textMessage = `Olá, gostaria de aprovar a proposta de paisagismo de ${client.name}!`;
+  const whatsappLink = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(textMessage)}`;
 
   return (
     <footer className="footer-section">
