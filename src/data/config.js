@@ -152,23 +152,31 @@ export const proposals = {
     },
     references: [
       {
-        id: "residencial-ck",
-        title: "Residencial CK",
-        description: "Jardim contemporâneo com biofilia integrada à arquitetura, em equilíbrio sereno entre rigor e exuberância.",
+        id: "aline-gustavo",
+        title: "Aline e Gustavo",
+        description: "Projeto paisagístico residencial com repaginação e conservação.",
         images: [
-          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/01.jpg",
-          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/02.jpg",
-          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/03.jpg"
+          "/referencias/Aline e Gustavo/20240416_161058-2.jpg",
+          "/referencias/Aline e Gustavo/_MG_1428.jpg",
+          "/referencias/Aline e Gustavo/_MG_1447.jpg",
+          "/referencias/Aline e Gustavo/_MG_1493.jpg",
+          "/referencias/Aline e Gustavo/_MG_3328.jpg",
+          "/referencias/Aline e Gustavo/_MG_3331.jpg",
+          "/referencias/Aline e Gustavo/_MG_3375-Editar.jpg"
         ]
       },
       {
-        id: "residencial-rm",
-        title: "Residencial RM",
-        description: "Composição paisagística que dialoga perfeitamente com a arquitetura residencial, criando uma nova camada de leitura e sofisticação.",
+        id: "heloisa-daniel",
+        title: "Heloisa e Daniel",
+        description: "Integração entre arquitetura e paisagismo exuberante.",
         images: [
-          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/01.jpg",
-          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/02.jpg",
-          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/03.jpg"
+          "/referencias/heloisa e Daniel/20240220_124030.jpg",
+          "/referencias/heloisa e Daniel/20240220_124343.jpg",
+          "/referencias/heloisa e Daniel/20240220_124654.jpg",
+          "/referencias/heloisa e Daniel/20240220_124807.jpg",
+          "/referencias/heloisa e Daniel/DJI_0192.jpg",
+          "/referencias/heloisa e Daniel/IMG_3173.jpg",
+          "/referencias/heloisa e Daniel/_MG_3010.jpg"
         ]
       }
     ],
