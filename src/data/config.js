@@ -118,6 +118,81 @@ export const proposals = {
         }
       ]
     }
+  },
+  "nadielle-joao": {
+    id: "nadielle-joao",
+    date: "Junho 2026",
+    client: {
+      name: "Nadielle e João Pedro",
+      doctor: "Arquiteta: Vitória Fadu",
+      specialty: "Alphaville 3",
+      description: "Projeto paisagístico contemporâneo de reforma, integrando conservação de espécies locais com uma revitalização completa para acompanhar a nova arquitetura da residência."
+    },
+    hero: {
+      title: "O jardim é a extensão do seu modo de viver.",
+      subtitle: "Paisagismo Residencial Autoral",
+      backgroundImage: "https://residencial.andreaesteves.com.br/imagens/hero.jpg"
+    },
+    about: {
+      title: "O Verdadeiro Luxo",
+      quote: "Transformamos espaços em experiências. Cada projeto é uma oportunidade de criar ambientes que inspiram, acolhem e valorizam o patrimônio de quem confia em nós.",
+      name: "Andréa Esteves",
+      role: "Paisagista & fundadora · 24 anos de trajetória",
+      image: "/referencias/andrea_depoimento.jpg",
+      narrative: [
+        "O luxo contemporâneo não reside apenas em materiais caros, mas na exclusividade da experiência e na reconexão com o que há de mais essencial: a natureza.",
+        "Ao entrar em um espaço onde a natureza é pensada de forma autoral e harmônica, você percebe imediatamente o cuidado e a sofisticação. O verde bem planejado fortalece memórias afetivas, promove saúde emocional e transforma a residência em um verdadeiro refúgio de bem-estar."
+      ]
+    },
+    concept: {
+      title: "A Nossa Essência",
+      description: "Acreditamos que o paisagismo vai além da estética. Ele transforma relações, promove saúde emocional, fortalece memórias afetivas e reconecta as pessoas com o que há de mais essencial: a natureza.",
+      highlight: "Uma revitalização paisagística que trará sofisticação e valorização para o seu imóvel no Alphaville 3.",
+      secondaryDescription: "Com um olhar detalhista, os ambientes externos dialogarão em perfeita harmonia com a repaginação arquitetônica assinada por Vitória Fadu. O projeto conservará espécies locais estratégicas, ao mesmo tempo em que introduzirá uma atmosfera mais contemporânea e acolhedora."
+    },
+    references: [
+      {
+        id: "residencial-ck",
+        title: "Residencial CK",
+        description: "Jardim contemporâneo com biofilia integrada à arquitetura, em equilíbrio sereno entre rigor e exuberância.",
+        images: [
+          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/01.jpg",
+          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/02.jpg",
+          "https://residencial.andreaesteves.com.br/imagens/residencial_ck/03.jpg"
+        ]
+      },
+      {
+        id: "residencial-rm",
+        title: "Residencial RM",
+        description: "Composição paisagística que dialoga perfeitamente com a arquitetura residencial, criando uma nova camada de leitura e sofisticação.",
+        images: [
+          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/01.jpg",
+          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/02.jpg",
+          "https://residencial.andreaesteves.com.br/imagens/residencial_rm/03.jpg"
+        ]
+      }
+    ],
+    instagramReels: [
+      "https://www.instagram.com/reel/DKk8Dh9yfsf/embed/"
+    ],
+    commercial: {
+      title: "Proposta de Investimento",
+      description: "Um investimento na valorização do seu patrimônio e na qualidade de vida da sua família.",
+      options: [
+        {
+          type: "Valor do Projeto",
+          value: "12.000",
+          condition: "À vista",
+          highlight: false
+        },
+        {
+          type: "Valor do Projeto",
+          value: "15.000",
+          condition: "Parcelado",
+          highlight: true
+        }
+      ]
+    }
   }
 };
 
