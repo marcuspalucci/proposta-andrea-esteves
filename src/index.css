@@ -140,18 +140,32 @@ section {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+  
+  /* Força a visibilidade ignorando o framer-motion */
+  [style*="opacity"] {
+    opacity: 1 !important;
+  }
+  [style*="transform"] {
+    transform: none !important;
+  }
+
   body {
     background: var(--paper) !important;
+    overflow: visible !important;
   }
-  .animate-fade-up {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
-  section {
+
+  section, .hero-section {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
     padding: 3rem 1.5rem !important;
     page-break-inside: avoid;
   }
+  
+  .hero-section {
+    page-break-after: always;
+  }
+
   .lightbox-overlay {
     display: none !important;
   }
