@@ -73,6 +73,8 @@ export default function CasesGallery() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightbox]);
 
+
+
   return (
     <>
       <section className="editorial-section" ref={sectionRef}>
@@ -134,11 +136,15 @@ export default function CasesGallery() {
           </button>
           
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <img 
-              src={references[lightbox.projectIndex].images[lightbox.imageIndex]} 
-              alt="Ampliada" 
-              className="lightbox-image" 
-            />
+            {references[lightbox.projectIndex].images.map((img, idx) => (
+              <img 
+                key={idx}
+                src={img} 
+                alt={`${references[lightbox.projectIndex].title} - Foto ${idx + 1}`} 
+                className={`lightbox-image ${idx === lightbox.imageIndex ? 'active' : ''}`} 
+              />
+            ))}
+            
             <div className="lightbox-caption">
               {references[lightbox.projectIndex].title} — {lightbox.imageIndex + 1} de {references[lightbox.projectIndex].images.length}
             </div>

@@ -1,4 +1,5 @@
 {
+  "name": "andrea-esteves-apresentacoes",
   "rewrites": [
     {
       "source": "/(.*)",
