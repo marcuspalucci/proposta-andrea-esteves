@@ -1,0 +1,78 @@
+.reels-section {
+  padding: 8rem 6rem;
+  background: var(--paper); /* matching CasesGallery or CommercialProposal */
+  border-top: 1px solid var(--line);
+}
+
+.reels-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reels-header .eyebrow {
+  justify-content: center;
+  color: var(--sage-deep);
+}
+
+.reels-header .eyebrow::before {
+  background: var(--rose);
+}
+
+.reels-header .section-title {
+  color: var(--sage-deep);
+}
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.reel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* keep instagram natural width constraint */
+  margin: 0 auto;
+  aspect-ratio: 9/16; /* instagram reel ratio */
+  background-color: var(--bone); /* placeholder color before iframe loads */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.reel-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Because Instagram iframes can be stubborn with heights, sometimes forcing a min-height helps */
+@media (min-width: 900px) {
+  .reel-iframe {
+    height: 720px; /* Approximate height of standard IG embed */
+  }
+}
+
+@media (max-width: 1100px) {
+  .reels-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .reels-section {
+    padding: 5rem 1.5rem;
+  }
+  .reels-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

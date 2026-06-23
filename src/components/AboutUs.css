@@ -1,0 +1,85 @@
+.about-section {
+  background: var(--bone);
+  padding: 10rem 6rem;
+  border-top: 1px solid var(--line);
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text .quote-mark {
+  font-size: 6rem;
+  line-height: 0.5;
+  color: var(--rose);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.about-text blockquote {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.35;
+  color: var(--sage-deep);
+  margin-bottom: 2.5rem;
+}
+
+.about-text blockquote em {
+  color: var(--terracotta);
+}
+
+.about-attribution {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.about-attribution .line {
+  width: 30px;
+  height: 1px;
+  background: var(--sage);
+}
+
+.about-attribution .name {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 500;
+}
+
+.about-attribution .role {
+  font-style: italic;
+  color: var(--sage);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.about-narrative h3 {
+  font-size: 2rem;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.about-narrative p {
+  color: var(--ink);
+  opacity: 0.8;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 5rem 1.5rem;
+  }
+  .about-grid {
+    padding: 0;
+  }
+}

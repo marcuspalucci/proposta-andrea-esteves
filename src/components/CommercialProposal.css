@@ -1,0 +1,94 @@
+.proposal-section {
+  background: var(--sage-deep);
+  color: var(--paper);
+}
+
+.proposal-section .eyebrow {
+  color: rgba(251, 248, 241, 0.7);
+}
+
+.proposal-section .eyebrow::before {
+  background: var(--rose);
+}
+
+.proposal-section .section-title {
+  color: var(--paper);
+  margin-bottom: 1.5rem;
+}
+
+.proposal-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.proposal-desc {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: rgba(251, 248, 241, 0.85);
+  max-width: 600px;
+}
+
+.proposal-cards {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.proposal-card {
+  background: rgba(251, 248, 241, 0.03);
+  border: 1px solid rgba(251, 248, 241, 0.1);
+  padding: 4rem 3rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s, background 0.4s;
+}
+
+.proposal-card.highlight {
+  background: rgba(196, 152, 138, 0.1);
+  border-color: var(--rose);
+  transform: translateY(-10px);
+}
+
+.proposal-card:hover {
+  background: rgba(251, 248, 241, 0.08);
+}
+
+.proposal-card.highlight:hover {
+  background: rgba(196, 152, 138, 0.15);
+}
+
+.card-type {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--rose);
+  margin-bottom: 1rem;
+}
+
+.card-value {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.card-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(251, 248, 241, 0.2);
+  margin: 0 auto 2rem;
+}
+
+.proposal-card.highlight .card-line {
+  background: var(--rose);
+}
+
+.card-condition {
+  font-size: 0.95rem;
+  color: rgba(251, 248, 241, 0.7);
+  line-height: 1.6;
+}

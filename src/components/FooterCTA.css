@@ -1,0 +1,29 @@
+.footer-section {
+  background: var(--paper);
+  text-align: center;
+  padding: 8rem 2rem 2rem;
+}
+
+.footer-content {
+  margin-bottom: 6rem;
+}
+
+.footer-content h2 {
+  font-size: 3rem;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+}
+
+.footer-content p {
+  color: var(--ink);
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+  color: var(--sage);
+  font-style: italic;
+  font-size: 1.1rem;
+}

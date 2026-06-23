@@ -1,0 +1,88 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 6rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  /* subtle zoom animation */
+  animation: slowZoom 20s ease-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(42,46,38,0.4) 0%, rgba(42,46,38,0.2) 40%, rgba(42,46,38,0.8) 100%),
+              radial-gradient(ellipse at center, transparent 30%, rgba(42,46,38,0.4) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: var(--paper);
+  max-width: 850px;
+}
+
+.hero-content .eyebrow {
+  color: rgba(251, 248, 241, 0.85);
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 1.05;
+  font-weight: 300;
+  letter-spacing: -0.018em;
+  margin-bottom: 2rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: #f0d4c4;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: rgba(251, 248, 241, 0.88);
+  font-style: italic;
+  max-width: 600px;
+}
+
+.hero-client-meta {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(251, 248, 241, 0.8);
+}
+
+.hero-client-meta .line {
+  width: 40px;
+  height: 1px;
+  background: rgba(251, 248, 241, 0.5);
+}
+
+.hero-client-meta p {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 0 1.5rem;
+  }
+}
