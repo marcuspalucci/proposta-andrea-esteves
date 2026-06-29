@@ -180,7 +180,7 @@ section {
 /* Print Styles (PDF Generation) */
 @media print {
   @page {
-    margin: 1.4cm;
+    margin: 1cm;
   }
 
   * {
@@ -204,14 +204,30 @@ section {
   body {
     background: var(--paper) !important;
     overflow: visible !important;
+    font-size: 11px;
+    line-height: 1.5;
   }
 
+  /* Compacta todas as seções e deixa o conteúdo fluir (menos folhas) */
   section {
     height: auto !important;
     min-height: auto !important;
     overflow: visible !important;
-    padding: 2.5rem 1.5rem !important;
-    page-break-inside: avoid;
+    padding: 1rem 1.2rem !important;
+    page-break-inside: auto;
+  }
+
+  .container {
+    max-width: 100% !important;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .section-title {
+    font-size: 1.9rem !important;
+    margin-bottom: 0.6rem !important;
   }
 
   /* Seções que NÃO entram no PDF: fotos de projetos, reels/vídeos */
@@ -220,14 +236,13 @@ section {
     display: none !important;
   }
 
-  /* Hero vira uma capa editorial limpa (sem foto de fundo nem overlay) */
+  /* Hero vira uma capa editorial limpa e enxuta (sem quebra de página forçada) */
   .hero-section {
     height: auto !important;
     min-height: auto !important;
     overflow: visible !important;
-    padding: 2rem 1.5rem 3rem !important;
+    padding: 0.5rem 1.2rem 1.5rem !important;
     background: var(--paper) !important;
-    page-break-after: always;
   }
   .hero-bg,
   .hero-overlay {
@@ -242,36 +257,114 @@ section {
   }
   .hero-title {
     color: var(--sage-deep) !important;
-    font-size: 3.2rem !important;
+    font-size: 2.4rem !important;
+    margin-bottom: 0.8rem !important;
   }
   .hero-title em {
     color: var(--terracotta) !important;
   }
   .hero-subtitle {
     color: var(--sage-deep) !important;
+    font-size: 1rem !important;
   }
   .hero-client-meta {
     color: var(--sage) !important;
+    margin-top: 1.2rem !important;
   }
   .hero-client-meta .line {
     background: var(--rose) !important;
   }
 
-  /* Limita a foto do processo para não dominar a página */
-  .process-img-wrapper,
-  .process-img {
-    max-height: 11cm !important;
+  /* Conceito: textos menores e espaçamento reduzido */
+  .context-grid {
+    gap: 1.5rem !important;
+  }
+  .context-main-text {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .context-secondary-text {
+    line-height: 1.55 !important;
   }
 
-  /* Proposta comercial: mantém o bloco verde da marca, ajustado para a página */
-  .proposal-header {
-    margin-bottom: 2.5rem !important;
+  /* Quem Somos: citação e narrativa mais compactas */
+  .about-text .quote-mark {
+    font-size: 3rem !important;
+    margin-bottom: 0.5rem !important;
   }
+  .about-text blockquote {
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .about-attribution {
+    margin-bottom: 1.2rem !important;
+  }
+  .about-narrative h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .about-narrative p {
+    line-height: 1.55 !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  /* Processo: remove a foto da Andréa, deixa só o texto em coluna única */
+  .process-left {
+    display: none !important;
+  }
+  .process-grid {
+    display: block !important;
+  }
+  .process-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .process-step {
+    padding: 0.7rem 0 !important;
+  }
+  .step-content h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  .step-content p {
+    line-height: 1.5 !important;
+  }
+
+  /* Proposta de Investimento: bloco e valor bem menores */
+  .proposal-header {
+    margin-bottom: 1.2rem !important;
+  }
+  .proposal-desc {
+    font-size: 1rem !important;
+  }
+  .proposal-card,
   .proposal-card.highlight {
     transform: none !important;
+    padding: 1.2rem 2rem !important;
+    max-width: 320px !important;
+  }
+  .card-type {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .card-value {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .card-line {
+    margin: 0 auto 0.6rem !important;
   }
 
-  /* O CTA do WhatsApp não faz sentido no papel */
+  /* Rodapé compacto; CTA do WhatsApp não faz sentido no papel */
+  .footer-section {
+    padding: 1.5rem 1.2rem 1rem !important;
+  }
+  .footer-content {
+    margin-bottom: 1.2rem !important;
+  }
+  .footer-content h2 {
+    font-size: 1.8rem !important;
+  }
   .footer-section .btn-primary {
     display: none !important;
   }
