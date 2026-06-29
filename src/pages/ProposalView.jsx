@@ -17,6 +17,24 @@ export default function ProposalView() {
   const { id } = useParams();
   const proposal = getProposal(id);
 
+  // Gera o PDF usando a impressão nativa do navegador ("Salvar como PDF").
+  // O CSS @media print remove fotos de projetos, reels e ornamentos, deixando
+  // um documento limpo e com texto vetorial selecionável.
+  const handleDownloadPdf = () => {
+    const previousTitle = document.title;
+    if (proposal?.client?.name) {
+      document.title = `Proposta - ${proposal.client.name}`;
+    }
+    const restore = () => {
+      document.title = previousTitle;
+      window.removeEventListener('afterprint', restore);
+    };
+    window.addEventListener('afterprint', restore);
+    window.print();
+    // Fallback caso o evento afterprint não dispare (alguns navegadores)
+    setTimeout(restore, 1500);
+  };
+
   // Navegação global por teclado para pular de seção em seção
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -82,6 +100,20 @@ export default function ProposalView() {
       <InstagramReels />
       <CommercialProposal />
       <FooterCTA />
+
+      <button
+        type="button"
+        className="pdf-download-btn no-print"
+        onClick={handleDownloadPdf}
+        aria-label="Baixar proposta em PDF"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        <span>Baixar PDF</span>
+      </button>
     </ProposalProvider>
   );
 }
