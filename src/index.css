@@ -217,6 +217,21 @@ section {
     page-break-inside: auto;
   }
 
+  /* Paginação controlada:
+     Pág. 1 -> Hero (Proposta Exclusiva)
+     Pág. 2 -> Conceito Paisagístico + Quem Somos
+     Pág. 3 -> O Processo Andréa + Proposta Comercial */
+  .context-section,
+  .about-section,
+  .process-section,
+  .proposal-section,
+  .footer-section {
+    page-break-inside: avoid;
+  }
+  .process-section {
+    page-break-before: always;
+  }
+
   .container {
     max-width: 100% !important;
   }
@@ -236,13 +251,14 @@ section {
     display: none !important;
   }
 
-  /* Hero vira uma capa editorial limpa e enxuta (sem quebra de página forçada) */
+  /* Hero é a capa: ocupa a página 1 inteira (Proposta Exclusiva) */
   .hero-section {
     height: auto !important;
     min-height: auto !important;
     overflow: visible !important;
     padding: 0.5rem 1.2rem 1.5rem !important;
     background: var(--paper) !important;
+    page-break-after: always;
   }
   .hero-bg,
   .hero-overlay {
@@ -320,7 +336,7 @@ section {
     margin-bottom: 1rem !important;
   }
   .process-step {
-    padding: 0.7rem 0 !important;
+    padding: 0.45rem 0 !important;
   }
   .step-content h3 {
     font-size: 1.2rem !important;
@@ -357,13 +373,21 @@ section {
 
   /* Rodapé compacto; CTA do WhatsApp não faz sentido no papel */
   .footer-section {
-    padding: 1.5rem 1.2rem 1rem !important;
+    padding: 0.8rem 1.2rem 0.5rem !important;
   }
   .footer-content {
-    margin-bottom: 1.2rem !important;
+    margin-bottom: 0.6rem !important;
   }
   .footer-content h2 {
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  .footer-content p {
+    margin-bottom: 0 !important;
+  }
+  .footer-bottom {
+    padding-top: 0.8rem !important;
+    font-size: 0.95rem !important;
   }
   .footer-section .btn-primary {
     display: none !important;
