@@ -251,12 +251,13 @@ section {
     display: none !important;
   }
 
-  /* Hero é a capa: ocupa a página 1 inteira (Proposta Exclusiva) */
+  /* Hero é a capa: ocupa a página 1 inteira (Proposta Exclusiva).
+     Empurra o texto um pouco mais para baixo na folha. */
   .hero-section {
     height: auto !important;
     min-height: auto !important;
     overflow: visible !important;
-    padding: 0.5rem 1.2rem 1.5rem !important;
+    padding: 6rem 1.2rem 1.5rem !important;
     background: var(--paper) !important;
     page-break-after: always;
   }
