@@ -201,7 +201,7 @@ export const proposals = {
       options: [
         {
           type: "Valor do Projeto",
-          value: "15.000",
+          value: "9.000",
           condition: "",
           highlight: true
         }
